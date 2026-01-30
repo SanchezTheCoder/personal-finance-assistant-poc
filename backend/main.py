@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Generator, Optional
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
@@ -42,6 +43,15 @@ app = FastAPI(title="Personal Finance Assistant POC")
 STREAMING_ENABLED = False
 registry = ToolRegistry()
 session_state: dict[str, dict[str, str]] = {}
+
+allowed_origins = os.getenv("CORS_ALLOW_ORIGINS", "http://localhost:8000,http://127.0.0.1:8000")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[origin.strip() for origin in allowed_origins.split(",") if origin.strip()],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 frontend_dir = APP_ROOT.parent / "frontend"
 if frontend_dir.exists():
