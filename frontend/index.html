@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/ui/styles.css?v=15" />
+    <link rel="stylesheet" href="/ui/styles.css?v=16" />
     <script>
       window.__API_BASE__ = "https://personal-finance-assistant-backend-yzf7.onrender.com";
     </script>
@@ -128,6 +128,22 @@
           </div>
 
           <form id="chat-form" class="chat-form">
+            <div class="prompt-select-row">
+              <label for="prompt-select" class="prompt-select-label">Demo prompts</label>
+              <select id="prompt-select" class="prompt-select">
+                <option value="">Choose a prompt…</option>
+                <option value="What are my current positions?">Positions overview</option>
+                <option value="How is AAPL performing?">AAPL performance</option>
+                <option value="What is my account value?">Account value</option>
+                <option value="Show me recent activity">Recent activity</option>
+                <option value="How did my portfolio do YTD?">Portfolio YTD performance</option>
+                <option value="What's MSFT price and today's change?">MSFT quote</option>
+                <option value="What is my cash balance in Brokerage?">Cash balance (Brokerage)</option>
+                <option value="How many shares of VOO do I own?">VOO position</option>
+                <option value="Best performing position">Best position (needs quotes)</option>
+                <option value="What is a Roth IRA?">Roth IRA fact</option>
+              </select>
+            </div>
             <div class="input-wrapper">
               <input
                 id="input"
@@ -299,6 +315,6 @@
       </div>
     </div>
 
-    <script src="/ui/app.js?v=23"></script>
+    <script src="/ui/app.js?v=24"></script>
   </body>
 </html>

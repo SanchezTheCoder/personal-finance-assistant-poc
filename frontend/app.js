@@ -76,6 +76,7 @@ function pctClass(num) {
 const chat = document.getElementById("chat");
 const form = document.getElementById("chat-form");
 const input = document.getElementById("input");
+const promptSelect = document.getElementById("prompt-select");
 const sendBtn = document.getElementById("send-btn");
 const welcomeState = document.getElementById("welcome-state");
 const typingIndicator = document.getElementById("typing-indicator");
@@ -134,6 +135,18 @@ function updateSendBtn() {
 
 input.addEventListener("input", updateSendBtn);
 updateSendBtn();
+
+if (promptSelect) {
+  promptSelect.addEventListener("change", () => {
+    const value = promptSelect.value.trim();
+    if (!value) {
+      return;
+    }
+    input.value = value;
+    updateSendBtn();
+    input.focus();
+  });
+}
 
 /* ============================================================
    Welcome State
