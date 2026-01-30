@@ -46,7 +46,7 @@ Vercel builds can OOM when installing PyTorch. For a stable, free setup:
 - `OPENAI_API_KEY` (required)
 - `OPENAI_MODEL` (default: `gpt-5.2`)
 - `OPENAI_BASE_URL` (optional; for compatible endpoints)
-- `CORS_ALLOW_ORIGINS` (comma-separated; defaults to localhost)
+- `CORS_ALLOW_ORIGINS` (comma-separated; defaults to localhost). Use `*` to allow all origins.
 
 ## Demo script (2-3 minutes)
 1. Ask: "What was my most recent trade?" (activity intent)

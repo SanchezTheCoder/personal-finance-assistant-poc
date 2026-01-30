@@ -45,10 +45,12 @@ registry = ToolRegistry()
 session_state: dict[str, dict[str, str]] = {}
 
 allowed_origins = os.getenv("CORS_ALLOW_ORIGINS", "http://localhost:8000,http://127.0.0.1:8000")
+origin_list = [origin.strip() for origin in allowed_origins.split(",") if origin.strip()]
+allow_all = "*" in origin_list
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[origin.strip() for origin in allowed_origins.split(",") if origin.strip()],
-    allow_credentials=True,
+    allow_origins=origin_list if origin_list else ["*"],
+    allow_credentials=False if allow_all else True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
