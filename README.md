@@ -82,7 +82,7 @@ export TORCH_ROUTER_CONF_THRESHOLD=0.6
 - If no API key is available, the system returns a clear fallback message.
 
 ## Routing at scale (real-world pattern)
-Large brokers typically use a multi-stage routing stack to keep latency low and accuracy high:
+Production systems typically use a multi-stage routing stack to keep latency low and accuracy high:
 - **Stage 1: deterministic rules** for high-precision intents (low cost, low latency).
 - **Stage 2: lightweight classifier** for ambiguous queries (small model, strict JSON output).
 - **Stage 3: policy gate** to enforce entitlements, account scope, and tool allowlists.
