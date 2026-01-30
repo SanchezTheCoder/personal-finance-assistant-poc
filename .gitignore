@@ -4,3 +4,5 @@ __pycache__/
 backend/traces/
 server.log
 *.log
+.vercel
+.vercel

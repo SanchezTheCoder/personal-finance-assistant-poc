@@ -17,6 +17,20 @@ uv run uvicorn backend.main:app --reload
 
 Open the UI at: http://127.0.0.1:8000 (or http://127.0.0.1:8000/ui)
 
+## Vercel deploy (full stack)
+This repo can run entirely on Vercel via a Python serverless function.
+
+1. Set env vars in Vercel:
+   - `OPENAI_API_KEY`
+   - `OPENAI_MODEL` (optional)
+   - `OPENAI_BASE_URL` (optional)
+   - `TORCH_ROUTER_CONF_THRESHOLD` (optional; default `0.6`)
+2. Deploy:
+   ```bash
+   vercel --prod
+   ```
+3. Use the Vercel URL; `/` loads the UI, and `/chat`, `/api/*`, `/debug/*`, `/eval` are handled by FastAPI.
+
 ## Environment variables
 - `OPENAI_API_KEY` (required)
 - `OPENAI_MODEL` (default: `gpt-5.2`)
