@@ -325,7 +325,8 @@ async function streamChat(utterance) {
           const traceEl = document.createElement("div");
           traceEl.className = "meta";
           const link = document.createElement("a");
-          link.href = `/debug/trace/${parsed.trace_id}`;
+          const apiBase = window.__API_BASE__ || "";
+          link.href = `${apiBase}/debug/trace/${parsed.trace_id}`;
           link.target = "_blank";
           link.rel = "noreferrer";
           link.textContent = `Trace: ${parsed.trace_id}`;
@@ -403,7 +404,8 @@ async function fallbackChat(utterance) {
     const traceEl = document.createElement("div");
     traceEl.className = "meta";
     const link = document.createElement("a");
-    link.href = `/debug/trace/${payload.trace_id}`;
+    const apiBase = window.__API_BASE__ || "";
+    link.href = `${apiBase}/debug/trace/${payload.trace_id}`;
     link.target = "_blank";
     link.rel = "noreferrer";
     link.textContent = `Trace: ${payload.trace_id}`;
@@ -624,7 +626,8 @@ function updateRoutingDrawer(trace) {
   }
 
   if (routingFields.traceLink) {
-    routingFields.traceLink.href = `/debug/trace/${trace.trace_id}`;
+    const apiBase = window.__API_BASE__ || "";
+    routingFields.traceLink.href = `${apiBase}/debug/trace/${trace.trace_id}`;
     routingFields.traceLink.textContent = `Open trace ${trace.trace_id}`;
   }
 }
