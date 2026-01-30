@@ -31,6 +31,17 @@ This repo can run entirely on Vercel via a Python serverless function.
    ```
 3. Use the Vercel URL; `/` loads the UI, and `/chat`, `/api/*`, `/debug/*`, `/eval` are handled by FastAPI.
 
+## Split deploy (recommended for Torch)
+Vercel builds can OOM when installing PyTorch. For a stable, free setup:
+
+1. Deploy backend on Render (Torch enabled).
+2. Deploy frontend on Vercel (static).
+3. Set the API base URL in `frontend/index.html`:
+   ```html
+   <script>window.__API_BASE__ = "https://YOUR_RENDER_BACKEND_URL";</script>
+   ```
+4. Redeploy Vercel.
+
 ## Environment variables
 - `OPENAI_API_KEY` (required)
 - `OPENAI_MODEL` (default: `gpt-5.2`)

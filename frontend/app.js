@@ -256,7 +256,8 @@ function addMessage(role, content, citations = []) {
    ============================================================ */
 
 async function streamChat(utterance) {
-  const response = await fetch("/chat", {
+  const apiBase = window.__API_BASE__ || "";
+  const response = await fetch(`${apiBase}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ utterance, stream: true, session_id: sessionId }),
@@ -363,7 +364,8 @@ async function streamChat(utterance) {
    ============================================================ */
 
 async function fallbackChat(utterance) {
-  const response = await fetch("/chat", {
+  const apiBase = window.__API_BASE__ || "";
+  const response = await fetch(`${apiBase}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ utterance, stream: false, session_id: sessionId }),
@@ -395,7 +397,8 @@ async function fallbackChat(utterance) {
     traceEl.appendChild(link);
     contentEl.parentElement.appendChild(traceEl);
     try {
-      const trace = await fetch(`/debug/trace/${payload.trace_id}`).then((res) => res.json());
+      const apiBase = window.__API_BASE__ || "";
+      const trace = await fetch(`${apiBase}/debug/trace/${payload.trace_id}`).then((res) => res.json());
       updateRoutingDrawer(trace);
     } catch (err) {
       console.warn("Failed to load trace for routing drawer", err);
@@ -419,7 +422,8 @@ if (routingExplain) {
       routingTeachingText.textContent = "Generating explanation...";
     }
     try {
-      const response = await fetch(`/debug/trace/${lastTraceId}/explain`, {
+      const apiBase = window.__API_BASE__ || "";
+      const response = await fetch(`${apiBase}/debug/trace/${lastTraceId}/explain`, {
         method: "POST",
       });
       const payload = await response.json();
@@ -652,7 +656,8 @@ const arrowDownSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 
 
 async function loadAccountSummary() {
   try {
-    const res = await fetch("/api/account_summary");
+    const apiBase = window.__API_BASE__ || "";
+    const res = await fetch(`${apiBase}/api/account_summary`);
     const data = await res.json();
     const payload = data.data ?? data;
     const acct = payload.accounts?.[0];
@@ -676,7 +681,8 @@ async function loadAccountSummary() {
 
 async function loadPerformanceBadge() {
   try {
-    const res = await fetch("/api/performance?timeframe=YTD");
+    const apiBase = window.__API_BASE__ || "";
+    const res = await fetch(`${apiBase}/api/performance?timeframe=YTD`);
     const data = await res.json();
     const payload = data.data ?? data;
     const badge = document.getElementById("ytd-badge");
@@ -691,7 +697,8 @@ async function loadPerformanceBadge() {
 
 async function loadPositions() {
   try {
-    const posRes = await fetch("/api/positions_list");
+    const apiBase = window.__API_BASE__ || "";
+    const posRes = await fetch(`${apiBase}/api/positions_list`);
     const posData = await posRes.json();
 
     const posPayload = posData.data ?? posData;
@@ -700,7 +707,7 @@ async function loadPositions() {
     // Fetch quotes for each symbol in parallel
     const quoteResults = await Promise.all(
       positions.map((pos) =>
-        fetch(`/api/quotes?symbol=${encodeURIComponent(pos.symbol)}`)
+        fetch(`${apiBase}/api/quotes?symbol=${encodeURIComponent(pos.symbol)}`)
           .then((r) => r.json())
           .catch(() => null)
       )
@@ -747,7 +754,8 @@ async function loadPositions() {
 
 async function loadActivity() {
   try {
-    const res = await fetch("/api/activity");
+    const apiBase = window.__API_BASE__ || "";
+    const res = await fetch(`${apiBase}/api/activity`);
     const data = await res.json();
     const payload = data.data ?? data;
     const container = document.getElementById("activity-list");
@@ -787,7 +795,8 @@ async function loadActivity() {
 
 async function loadTransfers() {
   try {
-    const res = await fetch("/api/transfers");
+    const apiBase = window.__API_BASE__ || "";
+    const res = await fetch(`${apiBase}/api/transfers`);
     const data = await res.json();
     const payload = data.data ?? data;
     const container = document.getElementById("transfers-list");
