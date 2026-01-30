@@ -253,38 +253,6 @@ wheels = [
 ]
 
 [[package]]
-name = "interview-financial-assistant-poc"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "fastapi" },
-    { name = "httpx" },
-    { name = "openai" },
-    { name = "pydantic" },
-    { name = "python-dotenv" },
-    { name = "tiktoken" },
-    { name = "uvicorn" },
-]
-
-[package.optional-dependencies]
-ml = [
-    { name = "torch" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastapi", specifier = ">=0.110.0" },
-    { name = "httpx", specifier = ">=0.27.0" },
-    { name = "openai", specifier = ">=1.35.0" },
-    { name = "pydantic", specifier = ">=2.6.0" },
-    { name = "python-dotenv", specifier = ">=1.0.1" },
-    { name = "tiktoken", specifier = ">=0.7.0" },
-    { name = "torch", marker = "extra == 'ml'", specifier = ">=2.2.0" },
-    { name = "uvicorn", specifier = ">=0.27.0" },
-]
-provides-extras = ["ml"]
-
-[[package]]
 name = "jinja2"
 version = "3.1.6"
 source = { registry = "https://pypi.org/simple" }
@@ -625,6 +593,34 @@ sdist = { url = "https://files.pythonhosted.org/packages/94/f4/4690ecb5d70023ce6
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b5/df/c306f7375d42bafb379934c2df4c2fa3964656c8c782bac75ee10c102818/openai-2.15.0-py3-none-any.whl", hash = "sha256:6ae23b932cd7230f7244e52954daa6602716d6b9bf235401a107af731baea6c3", size = 1067879, upload-time = "2026-01-09T22:10:06.446Z" },
 ]
+
+[[package]]
+name = "personal-finance-assistant-poc"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "fastapi" },
+    { name = "httpx" },
+    { name = "openai" },
+    { name = "pydantic" },
+    { name = "python-dotenv" },
+    { name = "tiktoken" },
+    { name = "torch" },
+    { name = "uvicorn" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", specifier = ">=0.110.0" },
+    { name = "httpx", specifier = ">=0.27.0" },
+    { name = "openai", specifier = ">=1.35.0" },
+    { name = "pydantic", specifier = ">=2.6.0" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "tiktoken", specifier = ">=0.7.0" },
+    { name = "torch", specifier = ">=2.2.0" },
+    { name = "uvicorn", specifier = ">=0.27.0" },
+]
+provides-extras = ["ml"]
 
 [[package]]
 name = "pydantic"
