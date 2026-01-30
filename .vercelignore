@@ -1,0 +1,9 @@
+api/
+backend/
+ml/
+scripts/
+specs/
+pyproject.toml
+uv.lock
+requirements.txt
+README.md
