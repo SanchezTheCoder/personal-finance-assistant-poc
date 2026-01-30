@@ -1739,8 +1739,43 @@ body.routing-open .routing-panel {
     grid-template-columns: 1fr;
   }
 
+  /* Mobile: routing panel as full-screen overlay */
   .routing-panel {
-    display: none !important;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    border-radius: 0;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    animation: slideUpMobile 300ms var(--ease-out) both;
+  }
+
+  body.routing-open .routing-panel {
+    display: block;
+  }
+
+  @keyframes slideUpMobile {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .routing-header {
+    position: sticky;
+    top: 0;
+    background: var(--devtools-bg);
+    padding: var(--space-4) var(--space-5);
+    margin: calc(-1 * var(--space-5));
+    margin-bottom: var(--space-4);
+    border-bottom: 1px solid var(--devtools-border);
+    z-index: 10;
   }
 
   .sidebar {
