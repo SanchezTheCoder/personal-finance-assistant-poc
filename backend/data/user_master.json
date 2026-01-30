@@ -1,0 +1,86 @@
+{
+  "as_of": "2026-01-15",
+  "account_summary": {
+    "as_of": "2026-01-15",
+    "accounts": [
+      {
+        "account": "Brokerage",
+        "total_value": 128450.22,
+        "total_cash": 12340.10,
+        "settled_cash": 11990.10
+      }
+    ]
+  },
+  "activity": {
+    "as_of": "2026-01-15",
+    "account": "Brokerage",
+    "trades": [
+      {
+        "timestamp": "2026-01-14T15:42:00Z",
+        "symbol": "AAPL",
+        "side": "BUY",
+        "quantity": 10,
+        "price": 192.33
+      },
+      {
+        "timestamp": "2026-01-07T17:05:00Z",
+        "symbol": "MSFT",
+        "side": "SELL",
+        "quantity": 5,
+        "price": 418.12
+      }
+    ]
+  },
+  "positions": {
+    "as_of": "2026-01-15",
+    "account": "Brokerage",
+    "positions": [
+      {"symbol": "AAPL", "quantity": 42, "cost_basis": 150.25, "asset_class": "stocks"},
+      {"symbol": "MSFT", "quantity": 12, "cost_basis": 280.10, "asset_class": "stocks"},
+      {"symbol": "VOO", "quantity": 25, "cost_basis": 390.55, "asset_class": "etf"}
+    ]
+  },
+  "quotes": {
+    "as_of": "2026-01-15",
+    "quotes": [
+      {"symbol": "AAPL", "price": 193.12, "change_pct": 1.1},
+      {"symbol": "MSFT", "price": 420.55, "change_pct": -0.6},
+      {"symbol": "VOO", "price": 412.34, "change_pct": 0.8},
+      {"symbol": "TSLA", "price": 238.22, "change_pct": 2.4}
+    ]
+  },
+  "performance": {
+    "as_of": "2026-01-15",
+    "account": "Brokerage",
+    "timeframe": "YTD",
+    "return_pct": 6.2,
+    "contributions": 1750.00
+  },
+  "transfers": {
+    "as_of": "2026-01-15",
+    "account": "Brokerage",
+    "transfers": [
+      {
+        "timestamp": "2026-01-12T10:15:00Z",
+        "type": "deposit",
+        "method": "ACH",
+        "amount": 1500.00,
+        "status": "completed"
+      },
+      {
+        "timestamp": "2026-01-10T14:05:00Z",
+        "type": "withdrawal",
+        "method": "ACH",
+        "amount": 500.00,
+        "status": "pending"
+      },
+      {
+        "timestamp": "2026-01-08T09:30:00Z",
+        "type": "deposit",
+        "method": "ACH",
+        "amount": 750.00,
+        "status": "completed"
+      }
+    ]
+  }
+}

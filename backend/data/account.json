@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-01-15",
+  "accounts": [
+    {
+      "account": "Brokerage",
+      "total_value": 128450.22,
+      "total_cash": 12340.1,
+      "settled_cash": 11990.1
+    }
+  ]
+}

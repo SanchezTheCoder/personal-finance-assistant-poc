@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-01-15",
+  "account": "Brokerage",
+  "positions": [
+    {
+      "symbol": "AAPL",
+      "quantity": 42,
+      "cost_basis": 150.25,
+      "asset_class": "stocks"
+    },
+    {
+      "symbol": "MSFT",
+      "quantity": 12,
+      "cost_basis": 280.1,
+      "asset_class": "stocks"
+    },
+    {
+      "symbol": "VOO",
+      "quantity": 25,
+      "cost_basis": 390.55,
+      "asset_class": "etf"
+    }
+  ]
+}

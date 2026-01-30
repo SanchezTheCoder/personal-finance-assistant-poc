@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-01-15",
+  "account": "Brokerage",
+  "transfers": [
+    {
+      "timestamp": "2026-01-12T10:15:00Z",
+      "type": "deposit",
+      "method": "ACH",
+      "amount": 1500.0,
+      "status": "completed"
+    },
+    {
+      "timestamp": "2026-01-10T14:05:00Z",
+      "type": "withdrawal",
+      "method": "ACH",
+      "amount": 500.0,
+      "status": "pending"
+    },
+    {
+      "timestamp": "2026-01-08T09:30:00Z",
+      "type": "deposit",
+      "method": "ACH",
+      "amount": 750.0,
+      "status": "completed"
+    }
+  ]
+}

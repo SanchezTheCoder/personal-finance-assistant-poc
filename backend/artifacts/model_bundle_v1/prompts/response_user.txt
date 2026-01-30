@@ -1,0 +1,8 @@
+User question:
+{{question}}
+
+Structured context (JSON):
+{{context_json}}
+
+Valid citations:
+{{valid_citations}}

@@ -1,0 +1,156 @@
+{
+  "intents": {
+    "activity": [
+      "What was my most recent trade?",
+      "Show my recent activity",
+      "Latest trade in my account",
+      "What did I trade last?",
+      "Recent trades",
+      "Show my trade history",
+      "Last transaction",
+      "Recent fills"
+    ],
+    "positions": [
+      "How many shares of {SYMBOL} do I own?",
+      "Do I hold any {SYMBOL}?",
+      "What's my {SYMBOL} position?",
+      "How many {SYMBOL} shares do I have?",
+      "How much {SYMBOL} do I own?",
+      "Do I have {SYMBOL} in my portfolio?",
+      "My {SYMBOL} holding",
+      "{SYMBOL} shares"
+    ],
+    "positions_list": [
+      "What are my positions?",
+      "Show all my holdings",
+      "List my portfolio positions",
+      "Show my stock positions",
+      "What do I own?",
+      "Show my holdings",
+      "List all positions",
+      "Show my portfolio",
+      "All positions in my account",
+      "Portfolio holdings"
+    ],
+    "portfolio_ranking": [
+      "Best performing position",
+      "Worst performing position",
+      "Which holding is up the most?",
+      "Which holding is down the most?",
+      "Top performer in my portfolio",
+      "Biggest loser in my holdings",
+      "Highest return position",
+      "Best unrealized gain",
+      "Worst unrealized loss",
+      "Performance of my positions"
+    ],
+    "symbol_performance": [
+      "How is {SYMBOL} performing?",
+      "What's my performance on {SYMBOL}?",
+      "Is {SYMBOL} up or down?",
+      "How is {SYMBOL} doing today?",
+      "{SYMBOL} performance",
+      "How is my {SYMBOL} position doing?",
+      "Return on {SYMBOL}",
+      "{SYMBOL} gain or loss",
+      "How much am I up on {SYMBOL}?"
+    ],
+    "performance": [
+      "How did my portfolio do {TIMEFRAME}?",
+      "What's my YTD performance?",
+      "How am I doing this year?",
+      "Portfolio return {TIMEFRAME}",
+      "How did I do overall?",
+      "Account performance {TIMEFRAME}",
+      "How is my portfolio performing?",
+      "How is my account doing?",
+      "Performance for my account"
+    ],
+    "quotes": [
+      "What's {SYMBOL} trading at?",
+      "Give me the quote for {SYMBOL}",
+      "{SYMBOL} price today",
+      "What is {SYMBOL} price and change?",
+      "{SYMBOL} quote",
+      "Latest price for {SYMBOL}",
+      "How much is {SYMBOL}?",
+      "{SYMBOL} current price"
+    ],
+    "transfers": [
+      "Show my transfers",
+      "Any deposits lately?",
+      "Recent withdrawals",
+      "Cash transfers in my account",
+      "Recent deposits",
+      "Incoming transfers",
+      "Outgoing transfers",
+      "Show my cash movements"
+    ],
+    "facts": [
+      "What is a Roth IRA?",
+      "Explain ETF basics",
+      "What does rebalancing mean?",
+      "Define {FACT_TOPIC}",
+      "Help me understand {FACT_TOPIC}",
+      "What is {FACT_TOPIC}?",
+      "Explain {FACT_TOPIC}"
+    ],
+    "account_value": [
+      "What is my account value?",
+      "How much is my portfolio worth?",
+      "Total account value",
+      "Account balance",
+      "What's my total value?",
+      "How much is in my account?",
+      "Total portfolio value"
+    ],
+    "cash_balance": [
+      "How much cash do I have?",
+      "What is my settled cash?",
+      "Cash balance",
+      "Available cash in my account",
+      "How much cash is available?",
+      "Total cash balance",
+      "Settled cash amount"
+    ]
+  },
+  "slots": {
+    "SYMBOL": ["AAPL", "MSFT", "VOO", "TSLA", "NVDA", "AMZN", "GME", "GOOG", "META", "AMD", "SPY", "QQQ"],
+    "TIMEFRAME": ["YTD", "1Y", "3M", "QTD", "this year", "this month", "last month"],
+    "FACT_TOPIC": ["Roth IRA", "ETF", "rebalancing", "index fund", "mutual fund", "bond", "dividend"],
+    "ACCOUNT": ["Brokerage", "IRA", "Roth IRA"]
+  },
+  "prefixes": [
+    "please",
+    "can you",
+    "could you",
+    "hey",
+    "hi",
+    "quick question",
+    "i want to know",
+    "tell me",
+    "show me",
+    "help me with"
+  ],
+  "suffixes": [
+    "please",
+    "right now",
+    "today",
+    "for my account",
+    "for my brokerage account",
+    "in my {ACCOUNT}"
+  ],
+  "account_phrases": [
+    "in my brokerage account",
+    "in my account",
+    "for my brokerage",
+    "for my portfolio"
+  ],
+  "typos": {
+    "performance": ["perfomance", "performnce"],
+    "positions": ["postions", "posiions"],
+    "quote": ["qoute"],
+    "balance": ["balnce"],
+    "portfolio": ["portoflio"]
+  }
+}

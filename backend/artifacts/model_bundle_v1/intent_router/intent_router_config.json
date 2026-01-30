@@ -1,0 +1,8 @@
+{
+  "max_vocab": 6000,
+  "token_pattern": "[A-Za-z0-9']+",
+  "ngram_max": 2,
+  "epochs": 12,
+  "batch_size": 32,
+  "learning_rate": 0.01
+}
