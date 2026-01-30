@@ -2,7 +2,7 @@
 name = "personal-finance-assistant-poc"
 version = "0.1.0"
 description = "Personal Finance Assistant demo (simulated data)"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 readme = "README.md"
 dependencies = [
   "fastapi>=0.110.0",
