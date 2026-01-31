@@ -1,4 +1,4 @@
-# [FEATURE NAME] - Ralph Wiggum Loop Prompt
+# [FEATURE NAME] - Iterative Dev Loop Prompt
 
 Read specs/README.md for system context.
 Read specs/[FEATURE]-plan.md for the task list.
@@ -43,7 +43,7 @@ Update specs/[FEATURE].md to reflect the new behavior.
 When all tasks in specs/[FEATURE]-plan.md are ~~DONE~~, output:
 
 ```
-RALPH_LOOP_COMPLETE_X9K7
+DEV_LOOP_COMPLETE_X9K7
 ```
 
 Then EXIT immediately.

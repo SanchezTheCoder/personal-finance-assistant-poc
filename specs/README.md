@@ -1,6 +1,6 @@
 # Personal Finance Assistant POC - System Index (PIN)
 
-> Quick lookup table for Ralph Wiggum Loop. Find synonyms, files, and specs.
+> Quick lookup table for the iterative dev loop. Find synonyms, files, and specs.
 
 ## Quick Reference
 
